@@ -1,0 +1,23 @@
+.form-control{
+    display: inline;
+    width: 90%;
+}
+
+.mat-card-image{
+    display: inline;
+    width:30%;
+    height:200px;
+    margin-top: 5px !important;
+}
+
+.mat-card{
+    display: inline;
+}
+
+.error-template {
+    padding: 40px 15px;text-align: center;
+}
+
+.container{
+    height: 350px;
+}

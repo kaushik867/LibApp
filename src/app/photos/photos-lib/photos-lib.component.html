@@ -1,0 +1,41 @@
+<div class="form-group mx-sm-3 mb-2">
+    <input class="form-control mx-5 my-5" (keyup)="onKeyUp($event)" placeholder="Seach photos" name="Search" #myInput>
+</div>
+  
+<mat-divider></mat-divider>
+<app-spinner *ngIf="loading.isLoading | async"></app-spinner>
+
+<ng-container *ngIf="data">
+    <div class="px-5 my-3">
+        <ng-container *ngFor="let image of data">
+            <mat-card class="mx-3 my-3">
+                <img mat-card-image src="{{image.urls.regular}}">	
+            </mat-card>
+        </ng-container>
+    </div>
+    <mat-paginator *ngIf="allData" [length]="10000"
+                [pageSize]="pageLength"  (page)="pageEvent = $event; onPageChange(pageEvent.pageIndex)">
+    </mat-paginator>
+</ng-container>
+
+<ng-container *ngIf="!data && !(loading.isLoading | async)">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="error-template">
+                    <h1>
+                        Oops!</h1>
+                    <h2>
+                        404 Not Found</h2>
+                    <div class="error-details">
+                        Sorry, No Data Found
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+
+
