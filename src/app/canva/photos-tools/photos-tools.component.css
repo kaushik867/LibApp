@@ -1,0 +1,64 @@
+.side-left{
+    width:30%;
+    height:593px;
+}
+
+div{
+    display:inline-block;
+}
+
+.photo-conatiner{
+    display: inline;
+}
+.side-right{
+    width:70%;
+    text-align:center;
+}
+
+.mat-card{
+    height: 100%;
+}
+
+.icon{
+    width:200px;
+    height: 200px;
+}
+
+.side-left .mat-card-image{
+    width:200px;
+    height:200px;
+    margin-left: 20%;
+    border-radius: 50%;
+}
+
+.mat-card-subtitle{
+    text-align: center;
+}
+
+.mat-card-subtitle .mat-icon{
+    padding:5%;
+}
+
+.mat-card-content{
+    text-align: center;
+}
+
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.container{
+    height: auto;
+}
+
+.side-right .mat-card-image{
+    display: inline;
+    width:20%;
+    height:200px;
+    margin-top: 5px !important;
+}
+
+.side-right .mat-card{
+    display: inline;
+}

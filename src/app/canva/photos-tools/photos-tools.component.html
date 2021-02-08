@@ -1,1 +1,46 @@
-<p>photos-tools works!</p>
+
+<div class="side-left">
+    <mat-card>
+        <mat-card-title color="primary">Profile</mat-card-title>
+        <img mat-card-image src="../../../assets/profile-icon-male-avatar-hipster-man-wear-headphones_48369-8728.jpg">
+        <mat-card-subtitle> <mat-icon>thumb_up</mat-icon><mat-icon>favorite</mat-icon></mat-card-subtitle>
+        <mat-card-content class="py-5">
+            <button (click)="designCanva()" mat-raised-button color="primary"><mat-icon>outbound</mat-icon> Design on canva</button>
+            <!-- <span data-design-type="Poster" data-api-key="FPIuaP3pXLIKsr0A/WV335eyY+9R8vRCynMHedbQZJc=" 
+            class="canva-design-button" style="display: none;">Design on Canva</span>  -->
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div class="side-right">
+    <app-spinner *ngIf="loader.isLoading | async"></app-spinner>
+    <ng-container *ngIf="photos">
+        <div class="px-5 my-3">
+            <ng-container *ngFor="let image of photos">
+                <mat-card class="mx-3 my-3 photos-conatiner">
+                    <img mat-card-image src="{{image.urls.regular}}">	
+                </mat-card>
+            </ng-container>
+        </div>
+    </ng-container>
+    
+    <ng-container *ngIf="!photos && !(loader.isLoading | async)">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="error-template">
+                        <h1>
+                            Oops!</h1>
+                        <h2>
+                            404 Not Found</h2>
+                        <div class="error-details">
+                            Sorry, No Data Found
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+

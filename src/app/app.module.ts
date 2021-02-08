@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { PhotosModule } from './photos/photos.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpinterceptorService } from './loader/services/httpinterceptor.service';
+import { CanvaModule } from './canva/canva.module';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,10 @@ import { HttpinterceptorService } from './loader/services/httpinterceptor.servic
     MaterialsModule,
     PhotosModule,
     HttpClientModule,
+    CanvaModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: HttpinterceptorService, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: HttpinterceptorService, multi: true},
   ],
   bootstrap: [AppComponent]
 })
