@@ -38,7 +38,7 @@ export class PhotosToolsComponent implements OnInit{
       script.onload = async function () {
         if (window.Canva && window.Canva.DesignButton) {
           const api = await window.Canva.DesignButton.initialize({
-            apiKey: 'YOUR-UNIQUE-API-KEY-HERE',
+            apiKey: 'sqKsxfkiaqNkrWb9EhWlE4pG',
           });
           window.api=api;
         }

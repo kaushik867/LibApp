@@ -53,6 +53,7 @@ export class PhotosLibComponent implements OnInit, OnDestroy {
     }
     else{
       this.onPageChange(this.currentPage)
+      this.allData =true;
     }
     
   }
